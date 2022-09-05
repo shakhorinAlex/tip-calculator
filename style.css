@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*before,
+*after {
+    box-sizing: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    padding: 0;
+    margin: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+h1 {
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 900px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    height: 75%;
+}
+
+/* Left Side */
+
+.left-side {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 90%;
+}
+
+.inputName {
+    margin-bottom: 1rem;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    height: 3rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.left-side_selectTip, .left-side_bill, .left-side_people {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.left-side_selectTip {
+    width: 100%;
+}
+
+.percentage-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.percentage-list_item {
+    width: 29%;
+    flex-grow: 1;
+    padding: 4px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.list-btn {
+    width: 100%;
+    cursor: pointer;
+    padding: 0.6625rem;
+    border-radius: 8px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border: 0;
+}
+
+#percentageInput {
+    height: 92%;
+    width: 80%;
+    background-color: transparent;
+    color: hsl(183, 100%, 15%);
+    border: 2px solid #26BFAB;
+    direction: rtl;
+    padding-right: 1rem;
+}
+
+.active {
+    background-color: #9FE8DF;
+    color: hsl(183, 100%, 15%);
+}
+
+/* .list-btn:focus {
+    background-color: #9FE8DF;
+    color: hsl(183, 100%, 15%);
+} */
+
+.top {
+    margin-bottom: 0.8rem;
+}
+
+.textInput {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    border: 2px solid #26BFAB;
+    color: hsl(183, 100%, 15%);
+    direction: rtl;
+    padding-right: 1rem;
+    width: 93%;
+}
+
+.bill-label, .peopleLabel {
+    position: relative;
+}
+
+.bill-label:before, .peopleLabel:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    bottom: 0;
+    width: 20px;
+    background-repeat: no-repeat;
+}
+
+.bill-label:before {
+    background-image: url(./images/icon-dollar.svg);
+}
+.peopleLabel:before {
+    background-image: url(./images/icon-person.svg);
+}
+
+/* Right side */
+
+.right-side {
+    background-color: hsl(183, 100%, 15%);
+    padding: 3rem;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right-side_text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.right-side_person {
+    color:hsl(184, 14%, 56%);
+}
+
+.tip-amount_money, .total_money {
+    color: #26BFAB;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 54px;
+}
+
+.tip-amount_container, .total_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.reset-btn {
+    background-color: #9FE8DF;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.6625rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Right side */

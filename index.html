@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="header">Tip Calculator App</h1>
+      <div class="container">
+        <div class="left-side">
+          <div class="left-side_bill">
+            <p class="inputName">Bill</p>
+            <label class="bill-label" for="bill">
+              <input
+                id="bill"
+                class="textInput"
+                type="number"
+                placeholder="0"
+                onblur="getVal()"
+              />
+            </label>
+          </div>
+
+          <div class="left-side_selectTip">
+            <p class="inputName">Select Tip %</p>
+            <ul class="percentage-list">
+              <li class="percentage-list_item">
+                <button value="5" class="list-btn">5%</button>
+              </li>
+              <li class="percentage-list_item">
+                <button value="10" class="list-btn">10%</button>
+              </li>
+              <li class="percentage-list_item">
+                <button value="15" class="list-btn">15%</button>
+              </li>
+              <li class="percentage-list_item">
+                <button value="25" class="list-btn">25%</button>
+              </li>
+              <li class="percentage-list_item">
+                <button value="50" class="list-btn">50%</button>
+              </li>
+              <li class="percentage-list_item">
+                <input
+                  id="percentageInput"
+                  class="percentage-input"
+                  type="number"
+                  placeholder="0"
+                  onblur="getValPerc()"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="left-side_people">
+            <p class="inputName">Custom Number of People</p>
+            <label class="peopleLabel" for="people">
+              <input
+                id="people"
+                class="textInput"
+                type="number"
+                placeholder="0"
+                onblur="getValPeople()"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="right-side">
+          <div class="right-side_wrapper">
+            <div class="tip-amount_container">
+              <div class="tip-amount_details">
+                <p class="right-side_text">Tip Amount</p>
+                <p class="right-side_person">/ person</p>
+              </div>
+              <div class="tip-amount_number">
+                <p class="tip-amount_money"></p>
+              </div>
+            </div>
+
+            <div class="total_container">
+              <div class="total_details">
+                <p class="right-side_text">Total</p>
+                <p class="right-side_person">/ per Group</p>
+              </div>
+              <div class="total_number">
+                <p class="total_money"></p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onclick="window.location.reload()"
+            id="reset"
+            class="reset-btn"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
